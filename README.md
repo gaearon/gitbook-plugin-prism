@@ -1,4 +1,6 @@
-gitbook-plugin
+GitBook Sample Plugin
 ==============
 
-Sample plugin for GitBook
+This is a sample plugin for GitBook.
+
+Install it using: ```$ npm install gitbook-plugin```
