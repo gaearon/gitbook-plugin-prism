@@ -13,9 +13,9 @@ A plugin for GitBook is a node package that can be published on [NPM](www.npmjs.
 
 #### name
 
-The package name should begin with ```gitbook-```. And if your plugin is a theme, it should begin with ```gitbook-theme-```.
+The package name should begin with ```gitbook-plugin-```. And if your plugin is a theme, it should begin with ```gitbook-theme-```.
 
-Examples: `gitbook-googleanalytics`, `gitbook-theme-dark`
+Examples: `gitbook-plugin-mixpanel`, `gitbook-plugin-googleanalytics`, `gitbook-theme-dark`
 
 #### engine
 
