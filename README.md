@@ -70,3 +70,15 @@ This object is a map: "name" -> "file", with names:
 * "site": page for a file from the `site` format
 * "page": page for the `page` format
 
+#### "hooks"
+
+Type: `Object`
+Default value: `{}`
+
+Map of "name" -> Function that needs to be called during build process. With names:
+
+* "init": just after initialization, before generation
+* "finish": after generation and everuthing is finished
+
+Each hook can return a promise.
+
