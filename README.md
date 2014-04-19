@@ -4,3 +4,69 @@ GitBook Sample Plugin
 This is a sample plugin for GitBook.
 
 Install it using: ```$ npm install gitbook-plugin```
+
+## How GitBook plugin works?
+
+A plugin for GitBook is a node package that can be published on [NPM](www.npmjs.org).
+
+### package.json
+
+#### name
+
+The package name should begin with ```gitbook-```. And if your plugin is a theme, it should begin with ```gitbook-theme-```.
+
+Examples: `gitbook-googleanalytics`, `gitbook-theme-dark`
+
+#### engine
+
+The package.json should contain a `engine` field using [the standard norm](https://www.npmjs.org/doc/json.html#engines).
+
+```
+"engines": {
+    "gitbook": "*"
+}
+```
+
+For example if you want your plugin to supports only GitBook version supperior to 0.3.1: 
+
+```
+"engines": {
+    "gitbook": ">=0.3.1"
+}
+```
+
+### entry point
+
+The plugin entry point should return an object with some metadata.
+
+#### "book"
+
+Type: `Object`
+Default value: `{}`
+
+#### "book.js"
+
+Type: `Array`
+Default value: `[]`
+
+List of javascript file to add to the html pages.
+
+#### "book.css"
+
+Type: `Array`
+Default value: `[]`
+
+List of css file to add to the html pages.
+
+#### "book.templates"
+
+Type: `Object`
+Default value: `{}`
+
+Templates to override default templates, only use this option if you want to change entirely how the book is rendered.
+
+This object is a map: "name" -> "file", with names:
+
+* "site": page for a file from the `site` format
+* "page": page for the `page` format
+

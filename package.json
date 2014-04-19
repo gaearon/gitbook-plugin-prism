@@ -1,10 +1,10 @@
 {
     "name": "gitbook-plugin",
     "description": "Sample plugin for GitBook",
+    "main": "index.js",
     "version": "0.0.1",
     "engines": {
-        "gitbook": "*",
-        "node": "*"
+        "gitbook": "*"
     },
     "homepage": "https://github.com/GitbookIO/gitbook-plugin",
     "repository": {
