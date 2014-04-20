@@ -1,10 +1,11 @@
 module.exports = {
     book: {
+        assets: "./book",
         js: [
-            "book/test.js"
+            "test.js"
         ],
         css: [
-            "book/test.css"
+            "test.css"
         ]
     },
     hooks: {

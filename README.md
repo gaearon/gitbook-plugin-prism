@@ -44,19 +44,26 @@ The plugin entry point should return an object with some metadata.
 Type: `Object`
 Default value: `{}`
 
+#### "book.assets"
+
+Type: `String`
+Default value: `null`
+
+Path to the assets folder to copy
+
 #### "book.js"
 
 Type: `Array`
 Default value: `[]`
 
-List of javascript file to add to the html pages.
+List of javascript file to add to the html pages (relative to the assets fodler).
 
 #### "book.css"
 
 Type: `Array`
 Default value: `[]`
 
-List of css file to add to the html pages.
+List of css file to add to the html pages (relative to the assets fodler).
 
 #### "book.templates"
 
