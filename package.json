@@ -6,13 +6,13 @@
     "engines": {
         "gitbook": "*"
     },
-    "homepage": "https://github.com/GitbookIO/gitbook-plugin",
+    "homepage": "https://github.com/GitbookIO/plugin",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GitbookIO/gitbook-plugin.git"
+        "url": "https://github.com/GitbookIO/plugin.git"
     },
     "license": "Apache 2",
     "bugs": {
-        "url": "https://github.com/GitbookIO/gitbook-plugin/issues"
+        "url": "https://github.com/GitbookIO/plugin/issues"
     }
 }
