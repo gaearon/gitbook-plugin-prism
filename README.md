@@ -85,7 +85,7 @@ Default value: `{}`
 Map of "name" -> Function that needs to be called during build process. With names:
 
 * "init": just after initialization, before generation
-* "finish": after generation and everuthing is finished
+* "finish": after generation and everything is finished
 
 Each hook can return a promise.
 
