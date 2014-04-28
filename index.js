@@ -42,7 +42,7 @@ module.exports = {
             // page.content is a list of parsed sections
 
             // Example:
-            //page.content..unshift({type: "normal", content: "<h1>Title</h1>"})
+            //page.content.unshift({type: "normal", content: "<h1>Title</h1>"})
 
             return page;
         },
