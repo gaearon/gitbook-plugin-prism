@@ -27,7 +27,7 @@ The package.json should contain a `engine` field using [the standard norm](https
 }
 ```
 
-For example if you want your plugin to supports only GitBook version supperior to 0.3.1: 
+For example if you want your plugin to supports only GitBook version supperior to 0.3.1:
 
 ```
 "engines": {
@@ -64,6 +64,13 @@ Type: `Array`
 Default value: `[]`
 
 List of css file to add to the html pages (relative to the assets fodler).
+
+#### "book.html"
+
+Type: `Object`
+Default value: `{}`
+
+Map of position -> code, html snippets to add to each page.
 
 #### "book.templates"
 

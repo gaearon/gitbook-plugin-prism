@@ -6,7 +6,13 @@ module.exports = {
         ],
         css: [
             "test.css"
-        ]
+        ],
+        html: {
+            "head:start": "<!-- head:start -->",
+            "head:end": "<!-- head:end -->",
+            "body:start": "<!-- body:start -->",
+            "body:end": "<!-- body:end -->"
+        }
     },
     hooks: {
         // For all the hooks, this represent the current generator
