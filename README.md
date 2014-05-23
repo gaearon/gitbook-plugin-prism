@@ -70,7 +70,7 @@ List of css file to add to the html pages (relative to the assets fodler).
 Type: `Object`
 Default value: `{}`
 
-Map of position -> code, html snippets to add to each page.
+Map of position -> code, html snippets to add to each page. The code could be a fucntion.
 
 #### "book.templates"
 
