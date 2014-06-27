@@ -53,10 +53,10 @@ module.exports = {
         // Before html generation
         "page": function(page) {
             // page.path is the path to the file
-            // page.content is a list of parsed sections
+            // page.sections is a list of parsed sections
 
             // Example:
-            //page.content.unshift({type: "normal", content: "<h1>Title</h1>"})
+            //page.sections.unshift({type: "normal", content: "<h1>Title</h1>"})
 
             return page;
         },
