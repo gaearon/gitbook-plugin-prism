@@ -56,14 +56,14 @@ Path to the assets folder to copy
 Type: `Array`
 Default value: `[]`
 
-List of javascript file to add to the html pages (relative to the assets fodler).
+List of javascript file to add to the html pages (relative to the assets folder).
 
 #### "book.css"
 
 Type: `Array`
 Default value: `[]`
 
-List of css file to add to the html pages (relative to the assets fodler).
+List of css file to add to the html pages (relative to the assets folder).
 
 #### "book.html"
 
