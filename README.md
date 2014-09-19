@@ -70,7 +70,7 @@ List of css file to add to the html pages (relative to the assets folder).
 Type: `Object`
 Default value: `{}`
 
-Map of position -> code, html snippets to add to each page. The code could be a fucntion.
+Map of position -> code, html snippets to add to each page. The code could be a function.
 
 #### "book.templates"
 
