@@ -1,21 +1,19 @@
 GitBook Sample Plugin
 ==============
 
-This is a sample plugin for GitBook.
-
-Install it using: ```$ npm install gitbook-plugin```
+This is a model for GitBook plugins.
 
 ## How GitBook plugin works?
 
-A plugin for GitBook is a node package that can be published on [NPM](http://www.npmjs.org).
+A plugin for GitBook is a node package that can be published on [NPM](http://www.npmjs.org). It has to follow the name convention: `gitbook-plugin-*name*`.
 
 ### package.json
 
 #### name
 
-The package name should begin with ```gitbook-plugin-```. And if your plugin is a theme, it should begin with ```gitbook-theme-```.
+The package name should begin with ```gitbook-plugin-```.
 
-Examples: `gitbook-plugin-mixpanel`, `gitbook-plugin-googleanalytics`, `gitbook-theme-dark`
+Examples: `gitbook-plugin-mixpanel`, `gitbook-plugin-googleanalytics`.
 
 #### engine
 
@@ -39,60 +37,4 @@ For example if you want your plugin to supports only GitBook version supperior t
 
 The plugin entry point should return an object with some metadata.
 
-#### "book"
-
-Type: `Object`
-Default value: `{}`
-
-#### "book.assets"
-
-Type: `String`
-Default value: `null`
-
-Path to the assets folder to copy
-
-#### "book.js"
-
-Type: `Array`
-Default value: `[]`
-
-List of javascript file to add to the html pages (relative to the assets folder).
-
-#### "book.css"
-
-Type: `Array`
-Default value: `[]`
-
-List of css file to add to the html pages (relative to the assets folder).
-
-#### "book.html"
-
-Type: `Object`
-Default value: `{}`
-
-Map of position -> code, html snippets to add to each page. The code could be a function.
-
-#### "book.templates"
-
-Type: `Object`
-Default value: `{}`
-
-Templates to override default templates, only use this option if you want to change entirely how the book is rendered.
-
-This object is a map: "name" -> "file", with names:
-
-* "site": page for a file from the `site` format
-* "page": page for the `page` format
-
-#### "hooks"
-
-Type: `Object`
-Default value: `{}`
-
-Map of "name" -> Function that needs to be called during build process. With names:
-
-* "init": just after initialization, before generation
-* "finish": after generation and everything is finished
-
-Each hook can return a promise.
 

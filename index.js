@@ -1,5 +1,6 @@
 module.exports = {
-    book: {
+    // Extend website resources and html
+    website: {
         assets: "./book",
         js: [
             "test.js"
@@ -22,6 +23,51 @@ module.exports = {
             "body:end": "<!-- body:end -->"
         }
     },
+
+    // Extend ebook resources and html
+    website: {
+        assets: "./book",
+        js: [
+            "test.js"
+        ],
+        css: [
+            "test.css"
+        ],
+        html: {
+            "html:start": function() {
+                return "<!-- Start book "+this.options.title+" -->"
+            },
+            "html:end": function() {
+                return "<!-- End of book "+this.options.title+" -->"
+            },
+
+            "head:start": "<!-- head:start -->",
+            "head:end": "<!-- head:end -->",
+
+            "body:start": "<!-- body:start -->",
+            "body:end": "<!-- body:end -->"
+        }
+    },
+
+    // Extend templating blocks
+    blocks: {
+        // Author will be able to write "{% myTag %}World{% endMyTag %}"
+        myTag: {
+            process: function(blk) {
+                return "Hello "+blk.body;
+            }
+        }
+    },
+
+    // Extend templating filters
+    filters: {
+        // Author will be able to write "{{ 'test'|myFilter }}"
+        myFilter: function(s) {
+            return "Hello "+s;
+        }
+    },
+
+    // Hook process during build
     hooks: {
         // For all the hooks, this represent the current generator
 
@@ -33,44 +79,6 @@ module.exports = {
         // This is called after the book generation
         "finish": function() {
             console.log("finish!");
-        },
-
-        // The following hooks are called for each page of the book
-        // and can be used to change page content (html, data or markdown)
-
-
-        // Before parsing markdown
-        "page:before": function(page) {
-            // page.path is the path to the file
-            // page.content is a string with the file markdown content
-
-            // Example:
-            //page.content = "# Title\n" + page.content;
-
-            return page;
-        },
-
-        // Before html generation
-        "page": function(page) {
-            // page.path is the path to the file
-            // page.sections is a list of parsed sections
-
-            // Example:
-            //page.sections.unshift({type: "normal", content: "<h1>Title</h1>"})
-
-            return page;
-        },
-
-        // After html generation
-        "page:after": function(page) {
-            // page.path is the path to the file
-            // page.content is a string with the html output
-
-            // Example:
-            //page.content = "<h1>Title</h1>\n" + page.content;
-            // -> This title will be added before the html tag so not visible in the browser
-
-            return page;
         }
     }
 };
