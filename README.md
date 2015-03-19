@@ -12,10 +12,14 @@ The package name should set ```gitbook-plugin-google_code_prettify```.
 
 Step1. book.json configure
 
+```
 {
     "plugins": ["gitbookcode"]
 }
+```
 
 Step2. book.json configure
 
+```
 gitbook build ./
+```
