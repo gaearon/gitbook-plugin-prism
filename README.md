@@ -18,7 +18,7 @@ Step1. book.json configure
 }
 ```
 
-Step2. book.json configure
+Step2. build
 
 ```
 gitbook build ./
