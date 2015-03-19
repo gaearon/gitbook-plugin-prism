@@ -38,3 +38,4 @@ For example if you want your plugin to supports only GitBook version supperior t
 The plugin entry point should return an object with some metadata.
 
 
+# google_code_prettify
