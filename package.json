@@ -1,18 +1,18 @@
 {
-    "name": "gitbook-plugin",
-    "description": "Sample plugin for GitBook",
+    "name": "gitbook-plugin-google_code_prettify",
+    "description": "google-code-prettify for gitbook",
     "main": "index.js",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "engines": {
         "gitbook": "*"
     },
-    "homepage": "https://github.com/GitbookIO/plugin",
+    "homepage": "https://github.com/spricity/githook-google_code_prettify",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GitbookIO/plugin.git"
+        "url": "https://github.com/spricity/google_code_prettify.git"
     },
     "license": "Apache 2",
     "bugs": {
-        "url": "https://github.com/GitbookIO/plugin/issues"
+        "url": "https://github.com/spricity/google_code_prettify/issues"
     }
 }
