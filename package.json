@@ -2,7 +2,7 @@
     "name": "gitbook-plugin-google_code_prettify",
     "description": "google-code-prettify for gitbook",
     "main": "index.js",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "gitbook": "*"
     },
