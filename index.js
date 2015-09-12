@@ -1,12 +1,14 @@
 var Prism = require('prismjs');
 var cheerio = require('cheerio');
+var path = require('path');
+
+var cssFile = require.resolve('prismjs/themes/prism.css');
+var cssDirectory = path.dirname(cssFile);
 
 module.exports = {
   book: {
-    assets: './node_modules/prismjs/themes',
-    css: [
-      'prism.css'
-    ]
+    assets: cssDirectory,
+    css: [path.basename(cssFile)]
   },
   hooks: {
     page: function (page) {
