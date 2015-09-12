@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-prism",
   "description": "google-code-prettify for gitbook",
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "gitbook": "*"
   },
