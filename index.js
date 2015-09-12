@@ -1,4 +1,5 @@
 var Prism = require('prismjs');
+var cheerio = require('cheerio');
 
 module.exports = {
   book: {
@@ -9,15 +10,17 @@ module.exports = {
   },
   hooks: {
     page: function (page) {
-      var $ = cheerio.load(page.content);
+      page.sections.forEach(function (section) {
+        var $ = cheerio.load(section.content);
 
-      $('code').each(function() {
-        var text = $(this).text();
-        var highlighted = Prism.highlight(text, Prism.languages.javascript);
-        $(this).html(highlighted);
+        $('code').each(function() {
+          var text = $(this).text();
+          var highlighted = Prism.highlight(text, Prism.languages.javascript);
+          $(this).html(highlighted);
+        });
+
+        section.content = $.html();
       });
-
-      page.content = $.html();
       return page;
     }
   }
