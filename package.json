@@ -1,18 +1,22 @@
 {
-    "name": "gitbook-plugin-google_code_prettify",
-    "description": "google-code-prettify for gitbook",
-    "main": "index.js",
-    "version": "0.0.3",
-    "engines": {
-        "gitbook": "*"
-    },
-    "homepage": "https://github.com/spricity/githook-google_code_prettify",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/spricity/google_code_prettify.git"
-    },
-    "license": "Apache 2",
-    "bugs": {
-        "url": "https://github.com/spricity/google_code_prettify/issues"
-    }
+  "name": "gitbook-plugin-prism",
+  "description": "google-code-prettify for gitbook",
+  "main": "index.js",
+  "version": "0.0.1",
+  "engines": {
+    "gitbook": "*"
+  },
+  "homepage": "https://github.com/gaearon/githook-prism",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaearon/prism.git"
+  },
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/gaearon/prism/issues"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "prismjs": "0.0.1"
+  }
 }

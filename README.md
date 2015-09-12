@@ -1,25 +1,23 @@
-GitBook Google Code Prettify Plugin
+Gitbook Plugin for [Prism](http://prismjs.com/)
 ==============
 
+Currently only supports JavaScript.  
+Pull requests to fix this are welcome.
 
-### package.json
+## Usage
 
-#### name
-
-The package name should set ```gitbook-plugin-google_code_prettify```.
-
-#### How to use ?
-
-Step1. book.json configure
+Add the plugin to your `book.json`:
 
 ```
 {
-    "plugins": ["gitbookcode"]
+  "plugins": ["prism"]
 }
 ```
 
-Step2. build
+## Credits
 
-```
-gitbook build ./
-```
+Originally based on https://github.com/spricity/google_code_prettify.
+
+## License
+
+Apache 2
