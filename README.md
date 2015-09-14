@@ -1,9 +1,6 @@
 Gitbook Plugin for [Prism](http://prismjs.com/)
 ==============
 
-Currently only supports JavaScript.  
-Pull requests to fix this are welcome.
-
 <table>
   <tr>
     <td>
