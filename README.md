@@ -1,7 +1,7 @@
 Gitbook Plugin for [Prism](http://prismjs.com/)
 ==============
 
-Currently only supports JavaScript.  
+Currently only supports JavaScript.
 Pull requests to fix this are welcome.
 
 <table>
@@ -25,11 +25,11 @@ Pull requests to fix this are welcome.
 
 ## Usage
 
-Add the plugin to your `book.json`:
+Add the plugin to your `book.json`, and disable default GitBook code highlighting:
 
 ```
 {
-  "plugins": ["prism"]
+  "plugins": ["prism", "-highlight"]
 }
 ```
 

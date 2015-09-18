@@ -4,7 +4,7 @@
   "main": "index.js",
   "version": "0.1.1",
   "engines": {
-    "gitbook": ">=2.4.0"
+    "gitbook": ">=2.4.1"
   },
   "homepage": "https://github.com/gaearon/githook-plugin-prism",
   "repository": {
