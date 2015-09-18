@@ -1,28 +1,35 @@
 var Prism = require('prismjs');
-var cheerio = require('cheerio');
 var path = require('path');
 
 var prismCSS = require.resolve('prismjs/themes/prism.css');
 
+var DEFAULT_LANGUAGE = 'javascript';
+var MAP_LANGUAGES = {
+  'py': 'python',
+  'js': 'javascript',
+  'json': 'javascript',
+  'rb': 'ruby',
+  'csharp': 'cs',
+};
+
+var assets = {
+  assets: path.dirname(prismCSS),
+  css: [path.basename(prismCSS)]
+};
+
 module.exports = {
-  book: {
-    assets: path.dirname(prismCSS),
-    css: [path.basename(prismCSS)]
-  },
-  hooks: {
-    page: function (page) {
-      page.sections.forEach(function (section) {
-        var $ = cheerio.load(section.content);
+  book: assets,
+  ebook: assets,
+  blocks: {
+    code: function(block) {
+      // Normalize language id
+      var lang = block.kwargs.language || DEFAULT_LANGUAGE;
+      lang = MAP_LANGUAGES[lang] || lang;
 
-        $('code').each(function() {
-          var text = $(this).text();
-          var highlighted = Prism.highlight(text, Prism.languages.javascript);
-          $(this).html(highlighted);
-        });
+      // Get languages from prism
+      lang = Prism.languages[lang] || Prism.languages[DEFAULT_LANGUAGE];
 
-        section.content = $.html();
-      });
-      return page;
+      return Prism.highlight(block.body, lang);
     }
   }
 };
