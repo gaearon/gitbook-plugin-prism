@@ -16,6 +16,7 @@
     "url": "https://github.com/gaearon/githook-plugin-prism/issues"
   },
   "dependencies": {
-    "prismjs": "0.0.1"
+    "prismjs": "0.0.1",
+    "prism-languages": "^0.1.3"
   }
 }
