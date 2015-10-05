@@ -39,8 +39,7 @@ module.exports = {
       try {
         // The process can fail (failed to parse)
         highlighted = Prism.highlight(block.body, languages[lang]);
-      }
-      catch(e) {
+      } catch(e) {
         console.warn('Failed to highlight:');
         console.warn(e);
         highlighted = block.body;
