@@ -6,14 +6,14 @@
   "engines": {
     "gitbook": ">=2.4.1"
   },
-  "homepage": "https://github.com/gaearon/githook-plugin-prism",
+  "homepage": "https://github.com/gaearon/gitbook-plugin-prism",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/githook-plugin-prism.git"
+    "url": "https://github.com/gaearon/gitbook-plugin-prism.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gaearon/githook-plugin-prism/issues"
+    "url": "https://github.com/gaearon/gitbook-plugin-prism/issues"
   },
   "dependencies": {
     "prismjs": "0.0.1",
