@@ -1,22 +1,22 @@
 {
   "name": "gitbook-plugin-prism",
-  "description": "google-code-prettify for gitbook",
+  "description": "Prism highlighting for gitbook",
   "main": "index.js",
   "version": "0.1.1",
   "engines": {
-    "gitbook": "*"
+    "gitbook": ">=2.4.1"
   },
-  "homepage": "https://github.com/gaearon/githook-prism",
+  "homepage": "https://github.com/gaearon/githook-plugin-prism",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/prism.git"
+    "url": "https://github.com/gaearon/githook-plugin-prism.git"
   },
-  "license": "Apache 2",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gaearon/prism/issues"
+    "url": "https://github.com/gaearon/githook-plugin-prism/issues"
   },
   "dependencies": {
-    "cheerio": "^0.19.0",
-    "prismjs": "0.0.1"
+    "prismjs": "0.0.1",
+    "prism-languages": "^0.1.3"
   }
 }
