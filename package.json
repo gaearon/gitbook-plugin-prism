@@ -16,7 +16,7 @@
     "url": "https://github.com/gaearon/gitbook-plugin-prism/issues"
   },
   "dependencies": {
-    "prismjs": "0.0.1",
-    "prism-languages": "^0.1.3"
+    "prismjs": "^1.4.1",
+    "prism-languages": "^0.3.0"
   }
 }
