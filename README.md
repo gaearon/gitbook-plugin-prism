@@ -24,9 +24,23 @@ Gitbook Plugin for [Prism](http://prismjs.com/)
 
 Add the plugin to your `book.json`, and disable default GitBook code highlighting:
 
-```
+```json
 {
   "plugins": ["prism", "-highlight"]
+}
+```
+
+## Options
+
+Override default styles.  All css files must reside in the same folder.
+
+```json
+"pluginsConfig": {  
+  "prism": {
+    "css": [
+      "prismjs/themes/prism-solarizedlight.css"
+    ]
+  }
 }
 ```
 
