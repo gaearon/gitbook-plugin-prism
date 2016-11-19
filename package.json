@@ -3,6 +3,10 @@
   "description": "Prism highlighting for gitbook",
   "main": "index.js",
   "version": "1.1.0",
+  "scripts": {
+    "lint": "eslint index.js test.js",
+    "test": "npm run lint && tape test.js"
+  },
   "engines": {
     "gitbook": ">=2.4.1"
   },
@@ -16,6 +20,17 @@
     "url": "https://github.com/gaearon/gitbook-plugin-prism/issues"
   },
   "dependencies": {
-    "prismjs": "1.5.1"
+    "prismjs": "1.5.1",
+    "cheerio": "0.22.0"
+  },
+  "devDependencies": {
+    "eslint": "3.10.2",
+    "eslint-config-semistandard": "7.0.0",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.4.0",
+    "eslint-plugin-react": "6.7.1",
+    "eslint-plugin-standard": "2.0.1",
+    "gitbook-tester": "1.4.3",
+    "tape": "4.6.2"
   }
 }

@@ -1,6 +1,7 @@
 var Prism = require('prismjs');
-var languages =  require('prismjs').languages;
+var languages = require('prismjs').languages;
 var path = require('path');
+const cheerio = require('cheerio');
 
 var DEFAULT_LANGUAGE = 'markup';
 var MAP_LANGUAGES = {
@@ -13,13 +14,12 @@ var MAP_LANGUAGES = {
 
 function getAssets() {
 
-  var book = this;
-
   var cssFiles = this.config.get('pluginsConfig.prism.css', []);
   var cssFolder = null;
   var cssNames = [];
+  var cssName = null;
 
-  if(cssFiles.length === 0) {
+  if (cssFiles.length === 0) {
     cssFiles.push('prismjs/themes/prism.css');
   }
 
@@ -54,8 +54,8 @@ module.exports = {
       if (!languages[lang]) {
         try {
           require('prismjs/components/prism-' + lang + '.js');
-        }catch(e) {
-          console.warn('Failed to load prism syntax: '+ lang);
+        } catch (e) {
+          console.warn('Failed to load prism syntax: ' + lang);
           console.warn(e);
         }
       }
@@ -70,13 +70,41 @@ module.exports = {
       try {
         // The process can fail (failed to parse)
         highlighted = Prism.highlight(block.body, languages[lang]);
-      } catch(e) {
+      } catch (e) {
         console.warn('Failed to highlight:');
         console.warn(e);
         highlighted = block.body;
       }
 
       return highlighted;
+    }
+  },
+  hooks: {
+    'page': function(page) {
+
+      var highlighted = false;
+
+      var $ = cheerio.load(page.content);
+
+      // Prism css styles target the <code> and <pre> blocks using
+      // a substring CSS selector:
+      //
+      //    code[class*="language-"], pre[class*="language-"]
+      //
+      // Adding "language-" to each element should be sufficient to trigger
+      // correct color theme.
+      $('code, pre').each(function() {
+        highlighted = true;
+        const $this = $(this);
+        $this.addClass('language-');
+
+      });
+
+      if (highlighted) {
+        page.content = $.html();
+      }
+
+      return page;
     }
   }
 };
