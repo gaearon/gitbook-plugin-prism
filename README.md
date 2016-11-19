@@ -31,7 +31,7 @@ Override default styles.  All css files must reside in the same folder.
 }
 ```
 
-## Prism Themes
+### Prism Themes
 
 [https://github.com/PrismJS/prism](https://github.com/PrismJS/)
 
@@ -50,7 +50,7 @@ Override default styles.  All css files must reside in the same folder.
 #### Coy <small>`prismjs/themes/prism-coy.css`</small>
 ![Coy](http://i.imgur.com/kSJP9tq.png)
 
-## @Atelierbram Themes
+## Atelierbram Themes
 
 [https://github.com/atelierbram/syntax-highlighting](https://github.com/atelierbram/syntax-highlighting)
 
