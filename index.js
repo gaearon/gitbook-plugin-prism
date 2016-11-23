@@ -93,7 +93,7 @@ module.exports = {
       //
       // Adding "language-" to each element should be sufficient to trigger
       // correct color theme.
-      $('code, pre').each(function() {
+      $('pre').each(function() {
         highlighted = true;
         const $this = $(this);
         $this.addClass('language-');
