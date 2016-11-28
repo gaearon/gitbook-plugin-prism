@@ -1,7 +1,9 @@
 var Prism = require('prismjs');
 var languages = require('prismjs').languages;
 var path = require('path');
-const cheerio = require('cheerio');
+var fs = require('fs');
+var cheerio = require('cheerio');
+var mkdirp = require('mkdirp');
 
 var DEFAULT_LANGUAGE = 'markup';
 var MAP_LANGUAGES = {
@@ -30,17 +32,23 @@ function getAssets() {
     cssNames.push(cssName);
   });
 
-  var assets = {
+  return {
     assets: cssFolder,
     css: cssNames
   };
-
-  return assets;
 }
 
 module.exports = {
   book: getAssets,
-  ebook: getAssets,
+  ebook: function() {
+
+    // Adding prism-pdf.css to the CSS collection forces Gitbook  to add a reference to it in the html
+    // markup that is converted into a PDF.
+    var assets = getAssets.call(this);
+    assets.css.push('prism-pdf.css');
+    return assets;
+
+  },
   blocks: {
     code: function(block) {
 
@@ -77,10 +85,34 @@ module.exports = {
       }
 
       return highlighted;
+
     }
   },
   hooks: {
-    'page': function(page) {
+
+    // Copy prism-pdf.css into the temporary directory that Gitbook uses for inlining
+    // styles from this plugin.  This is done manually because prism-pdf.css lives outside
+    // the asset folder referenced above in getAssets().
+    //
+    // Inspired by https://github.com/GitbookIO/plugin-styles-less/blob/master/index.js#L8
+    init: function() {
+
+      var book = this;
+
+      var outputDirectory = book.output.root() + '/gitbook/gitbook-plugin-prism';
+      var outputFile = path.resolve(outputDirectory, 'prism-pdf.css');
+      var inputFile = path.resolve(__dirname, './prism-pdf.css');
+      mkdirp.sync(outputDirectory + 'gitbook/gitbook-plugin-prism');
+
+      try {
+        fs.writeFileSync(outputFile, fs.readFileSync(inputFile));
+      } catch (e) {
+        console.warn('Failed to write prism-pdf.css. See https://git.io/v1LHY for side effects.');
+        console.warn(e);
+      }
+
+    },
+    page: function(page) {
 
       var highlighted = false;
 
@@ -91,13 +123,12 @@ module.exports = {
       //
       //    code[class*="language-"], pre[class*="language-"]
       //
-      // Adding "language-" to each element should be sufficient to trigger
+      // Adding "language-" to <pre> element should be sufficient to trigger
       // correct color theme.
       $('pre').each(function() {
         highlighted = true;
         const $this = $(this);
         $this.addClass('language-');
-
       });
 
       if (highlighted) {

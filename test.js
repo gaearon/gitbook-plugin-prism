@@ -16,7 +16,7 @@ test('should highlight javascript code block', function (t) {
     })
     .create()
     .then(function(result) {
-      var expected = '<pre class="language-"><code class="lang-js language-"><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>';
+      var expected = '<pre class="language-"><code class="lang-js"><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>\n</code></pre>';
       t.equal(result[0].content, expected);
     })
     .done();
