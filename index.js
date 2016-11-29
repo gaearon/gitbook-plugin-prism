@@ -99,10 +99,16 @@ module.exports = {
 
       var book = this;
 
-      var outputDirectory = book.output.root() + '/gitbook/gitbook-plugin-prism';
+      if (book.output.name !== 'ebook') {
+        // Output path is different for websites so just skip the logic below since it
+        // is only valid for ebooks
+        return;
+      }
+
+      var outputDirectory = path.join(book.output.root(), '/gitbook/gitbook-plugin-prism');
       var outputFile = path.resolve(outputDirectory, 'prism-pdf.css');
       var inputFile = path.resolve(__dirname, './prism-pdf.css');
-      mkdirp.sync(outputDirectory + 'gitbook/gitbook-plugin-prism');
+      mkdirp.sync(outputDirectory);
 
       try {
         fs.writeFileSync(outputFile, fs.readFileSync(inputFile));
