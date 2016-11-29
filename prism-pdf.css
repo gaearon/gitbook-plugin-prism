@@ -12,6 +12,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /*
  * @See https://github.com/gaearon/gitbook-plugin-prism/issues/11#issuecomment-262058733
 */
-.page .section code {
+.page .section pre code {
     background-color: none;
 }
