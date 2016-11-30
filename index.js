@@ -42,10 +42,10 @@ module.exports = {
   book: getAssets,
   ebook: function() {
 
-    // Adding prism-pdf.css to the CSS collection forces Gitbook  to add a reference to it in the html
-    // markup that is converted into a PDF.
+    // Adding prism-ebook.css to the CSS collection forces Gitbook
+    // reference to it in the html markup that is converted into a PDF.
     var assets = getAssets.call(this);
-    assets.css.push('prism-pdf.css');
+    assets.css.push('prism-ebook.css');
     return assets;
 
   },
@@ -90,30 +90,29 @@ module.exports = {
   },
   hooks: {
 
-    // Copy prism-pdf.css into the temporary directory that Gitbook uses for inlining
-    // styles from this plugin.  This is done manually because prism-pdf.css lives outside
-    // the asset folder referenced above in getAssets().
+    // Manually copy prism-ebook.css into the temporary directory that Gitbook uses for inlining
+    // styles from this plugin. The getAssets() (above) function can't be leveraged because
+    // ebook-prism.css lives outside the folder referenced by this plugin's config.
     //
-    // Inspired by https://github.com/GitbookIO/plugin-styles-less/blob/master/index.js#L8
+    // @Inspiration https://github.com/GitbookIO/plugin-styles-less/blob/master/index.js#L8
     init: function() {
 
       var book = this;
 
       if (book.output.name !== 'ebook') {
-        // Output path is different for websites so just skip the logic below since it
-        // is only valid for ebooks
+        // Logic below does not apply to non-ebook formats
         return;
       }
 
       var outputDirectory = path.join(book.output.root(), '/gitbook/gitbook-plugin-prism');
-      var outputFile = path.resolve(outputDirectory, 'prism-pdf.css');
-      var inputFile = path.resolve(__dirname, './prism-pdf.css');
+      var outputFile = path.resolve(outputDirectory, 'prism-ebook.css');
+      var inputFile = path.resolve(__dirname, './prism-ebook.css');
       mkdirp.sync(outputDirectory);
 
       try {
         fs.writeFileSync(outputFile, fs.readFileSync(inputFile));
       } catch (e) {
-        console.warn('Failed to write prism-pdf.css. See https://git.io/v1LHY for side effects.');
+        console.warn('Failed to write prism-ebook.css. See https://git.io/v1LHY for side effects.');
         console.warn(e);
       }
 
