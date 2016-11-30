@@ -1,6 +1,8 @@
 Gitbook Plugin for [Prism](http://prismjs.com/)
 ==============
 
+[![NPM](http://img.shields.io/npm/v/gitbook-plugin-prism.svg?style=flat-square&label=npm)](https://www.npmjs.com/package/gitbook-plugin-prism)
+
 ##### Before
 <img src='http://i.imgur.com/cbk6O52.png'>
 
