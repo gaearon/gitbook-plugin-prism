@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-prism",
   "description": "Prism highlighting for gitbook",
   "main": "index.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "lint": "eslint index.js test.js",
     "test": "npm run lint && tape test.js"
