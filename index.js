@@ -10,7 +10,7 @@ var MAP_LANGUAGES = {
   'py': 'python',
   'js': 'javascript',
   'rb': 'ruby',
-  'csharp': 'cs',
+  'cs': 'csharp',
   'html': 'markup'
 };
 
