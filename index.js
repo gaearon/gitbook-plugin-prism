@@ -17,7 +17,7 @@ var MAP_LANGUAGES = {
 // Base languages syntaxes (as of prism@1.6.0), extended by other syntaxes.
 // They need to be required before the others.
 var PRELUDE = [
-  'clike', 'javascript', 'markup', 'c', 'ruby', 'css', 'previewer-base', 'toolbar',
+  'clike', 'javascript', 'markup', 'c', 'ruby', 'css',
   // The following depends on previous ones
   'java', 'php'
 ];
