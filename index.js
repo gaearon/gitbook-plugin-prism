@@ -77,7 +77,7 @@ module.exports = {
       // Try and find the language definition in components folder
       if (!languages[lang]) {
         try {
-            requireSyntax(lang);
+          requireSyntax(lang);
         } catch (e) {
           console.warn('Failed to load prism syntax: ' + lang);
           console.warn(e);
