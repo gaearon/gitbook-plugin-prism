@@ -14,6 +14,22 @@ var MAP_LANGUAGES = {
   'html': 'markup'
 };
 
+// Base languages syntaxes (as of prism@1.6.0), extended by other syntaxes.
+// They need to be required before the others.
+var PRELUDE = [
+  'clike', 'javascript', 'markup', 'c', 'ruby', 'css',
+  // The following depends on previous ones
+  'java', 'php'
+];
+PRELUDE.map(requireSyntax);
+
+/**
+ * Load the syntax definition for a language id
+ */
+function requireSyntax(lang) {
+  require('prismjs/components/prism-' + lang + '.js');
+}
+
 function getAssets() {
 
   var cssFiles = this.config.get('pluginsConfig.prism.css', []);
@@ -61,7 +77,7 @@ module.exports = {
       // Try and find the language definition in components folder
       if (!languages[lang]) {
         try {
-          require('prismjs/components/prism-' + lang + '.js');
+            requireSyntax(lang);
         } catch (e) {
           console.warn('Failed to load prism syntax: ' + lang);
           console.warn(e);
