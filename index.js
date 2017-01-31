@@ -11,6 +11,7 @@ var MAP_LANGUAGES = {
   'js': 'javascript',
   'rb': 'ruby',
   'cs': 'csharp',
+  'sh': 'bash',
   'html': 'markup'
 };
 
