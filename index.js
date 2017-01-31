@@ -11,6 +11,7 @@ var MAP_LANGUAGES = {
   'js': 'javascript',
   'rb': 'ruby',
   'cs': 'csharp',
+  'sh': 'bash',
   'html': 'markup'
 };
 
@@ -69,10 +70,11 @@ module.exports = {
     code: function(block) {
 
       var highlighted = '';
+      var userDefined = this.config.get('pluginsConfig.prism.lang', {});
 
       // Normalize language id
       var lang = block.kwargs.language || DEFAULT_LANGUAGE;
-      lang = MAP_LANGUAGES[lang] || lang;
+      lang = userDefined[lang] || MAP_LANGUAGES[lang] || lang;
 
       // Try and find the language definition in components folder
       if (!languages[lang]) {
