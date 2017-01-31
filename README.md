@@ -65,6 +65,19 @@ Override default styles.  All css files must reside in the same folder.
 #### Xonokai <small>`syntax-highlighting/assets/css/prism/prism-xonokai.css`</small>
 ![Google Light](http://i.imgur.com/fPjEEv8.png)
 
+### Syntax aliasing
+
+To support non-standard syntax prefixes, you can alias existing prefixes:
+```json
+"pluginsConfig": {  
+  "prism": {
+    "lang": {
+      "flow": "typescript"
+    }
+  }
+}
+```
+
 ## Credits
 
 Originally based on https://github.com/spricity/google_code_prettify.
