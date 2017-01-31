@@ -21,14 +21,29 @@ Add the plugin to your `book.json`, and disable default GitBook code highlightin
 
 ## Options
 
+
+### `css`
 Override default styles.  All css files must reside in the same folder.
 
 ```json
-"pluginsConfig": {  
+"pluginsConfig": {
   "prism": {
     "css": [
       "prismjs/themes/prism-solarizedlight.css"
     ]
+  }
+}
+```
+
+### `lang`
+Support non-standard syntax prefixes by aliasing existing prefixes.
+
+```json
+"pluginsConfig": {
+  "prism": {
+    "lang": {
+      "flow": "typescript"
+    }
   }
 }
 ```
@@ -64,19 +79,6 @@ Override default styles.  All css files must reside in the same folder.
 
 #### Xonokai <small>`syntax-highlighting/assets/css/prism/prism-xonokai.css`</small>
 ![Google Light](http://i.imgur.com/fPjEEv8.png)
-
-### Syntax aliasing
-
-To support non-standard syntax prefixes, you can alias existing prefixes:
-```json
-"pluginsConfig": {  
-  "prism": {
-    "lang": {
-      "flow": "typescript"
-    }
-  }
-}
-```
 
 ## Credits
 
