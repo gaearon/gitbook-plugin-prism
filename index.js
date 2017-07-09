@@ -31,9 +31,24 @@ function requireSyntax(lang) {
   require('prismjs/components/prism-' + lang + '.js');
 }
 
+function getConfig(context, property, defaultValue) {
+  var config = context.config ? /* 3.x */ context.config : /* 2.x */ context.book.config;
+  return config.get(property, defaultValue);
+}
+
+function isEbook(book) {
+  // 2.x
+  if (book.options && book.options.generator) {
+    return book.options.generator === 'ebook';
+  }
+
+  // 3.x
+  return book.output.name === 'ebook';
+}
+
 function getAssets() {
 
-  var cssFiles = this.config.get('pluginsConfig.prism.css', []);
+  var cssFiles = getConfig(this, 'pluginsConfig.prism.css', []);
   var cssFolder = null;
   var cssNames = [];
   var cssName = null;
@@ -70,7 +85,7 @@ module.exports = {
     code: function(block) {
 
       var highlighted = '';
-      var userDefined = this.config.get('pluginsConfig.prism.lang', {});
+      var userDefined = getConfig(this, 'pluginsConfig.prism.lang', {});
 
       // Normalize language id
       var lang = block.kwargs.language || DEFAULT_LANGUAGE;
@@ -117,8 +132,7 @@ module.exports = {
 
       var book = this;
 
-      if (book.output.name !== 'ebook') {
-        // Logic below does not apply to non-ebook formats
+      if (!isEbook(book)) {
         return;
       }
 
