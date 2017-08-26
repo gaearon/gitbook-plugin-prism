@@ -94,7 +94,7 @@ module.exports = {
 
       // Check to see if the lang is ignored
       if (userIgnored.indexOf(lang) > -1) {
-        return block.body
+        return block.body;
       }
 
       // Try and find the language definition in components folder
