@@ -48,6 +48,20 @@ Support non-standard syntax prefixes by aliasing existing prefixes.
 }
 ```
 
+### `ignore`
+Due to other plugins using code block notion to denote other functionality, you can ignore certain langs
+
+```json
+"pluginsConfig": {
+  "prism": {
+    "ignore": [
+      "mermaid", //used by https://github.com/yanni4night/gitbook-plugin-mermaid-full
+      "eval-js" //used by https://github.com/brian-dawn/gitbook-plugin-klipse
+    ]
+  }
+}
+```
+
 ### Prism Themes
 
 [https://github.com/PrismJS/prism](https://github.com/PrismJS/)
