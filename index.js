@@ -86,10 +86,16 @@ module.exports = {
 
       var highlighted = '';
       var userDefined = getConfig(this, 'pluginsConfig.prism.lang', {});
+      var userIgnored = getConfig(this, 'pluginsConfig.prism.ignore', []);
 
       // Normalize language id
       var lang = block.kwargs.language || DEFAULT_LANGUAGE;
       lang = userDefined[lang] || MAP_LANGUAGES[lang] || lang;
+
+      // Check to see if the lang is ignored
+      if (userIgnored.indexOf(lang) > -1) {
+        return block.body
+      }
 
       // Try and find the language definition in components folder
       if (!languages[lang]) {
