@@ -55,8 +55,8 @@ Due to other plugins using code block notion to denote other functionality, you 
 "pluginsConfig": {
   "prism": {
     "ignore": [
-      "mermaid", //used by https://github.com/yanni4night/gitbook-plugin-mermaid-full
-      "eval-js" //used by https://github.com/brian-dawn/gitbook-plugin-klipse
+      "mermaid",
+      "eval-js"
     ]
   }
 }
