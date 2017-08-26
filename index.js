@@ -93,7 +93,7 @@ module.exports = {
       lang = userDefined[lang] || MAP_LANGUAGES[lang] || lang;
 
       // Check to see if the lang is ignored
-      if (userIgnored.indexOf(lang) === -1) {
+      if (userIgnored.indexOf(lang) > -1) {
         return block.body
       }
 
