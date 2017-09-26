@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "eslint index.js test.js",
-    "test": "npm run lint && tape test.js"
+    "test": "yarn link && yarn run lint && tape test.js"
   },
   "engines": {
     "gitbook": ">=2.4.1 <4.0.0"
