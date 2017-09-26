@@ -8,7 +8,7 @@ function expect(t, version, content, expected) {
     .withLocalPlugin(__dirname)
     .withBookJson({
       gitbook: version,
-      plugins: ['prism', '-highlight']
+      plugins: ['prism-djangogirls', '-highlight']
     })
     .create()
     .then(function(result) {
