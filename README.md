@@ -96,7 +96,7 @@ Due to other plugins using code block notion to denote other functionality, you 
 
 ## Credits
 
-Originally based on https://github.com/spricity/google_code_prettify.
+Originally based on https://github.com/spricity/google_code_prettify and https://github.com/gaearon/gitbook-plugin-prism.
 
 ## License
 
