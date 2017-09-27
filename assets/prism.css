@@ -182,8 +182,6 @@ pre.line-numbers > code {
 	display: block;
 	float: left;
 	font-size: 100%;
-	letter-spacing: -7px;
-	margin-right: 1em;
 	pointer-events: none;
 
 	-webkit-user-select: none;
