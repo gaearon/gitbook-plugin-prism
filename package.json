@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "eslint index.js test.js",
-    "test": "yarn link && yarn run lint && tape test.js"
+    "test": "yarn run lint && tape test.js"
   },
   "engines": {
     "gitbook": ">=2.4.1 <4.0.0"
@@ -34,6 +34,7 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "gitbook-tester": "1.4.3",
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "tape-catch": "^1.0.6"
   }
 }
