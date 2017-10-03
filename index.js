@@ -24,9 +24,6 @@ module.exports = {
         });
 
         keys.forEach(function(element) {
-          if (element === '__keywords') {
-            return;
-          }
           $('pre').attr('data-' + element, block.kwargs[element]);
         });
 
