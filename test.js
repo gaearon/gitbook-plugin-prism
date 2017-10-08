@@ -18,12 +18,12 @@ function expect(t, version, content, expected) {
 
 }
 
-test('highlight csharp code using shortcut', function (t) {
+test('highlight prompt code using shortcut', function (t) {
 
   t.plan(2);
 
-  var content = '{% pre prompt="$ " %}\npython\n{% endpre %}';
-  var expected = '<p><pre class="command-line language-python" data-prompt="$ "><code>python</code></pre></p>';
+  var content = '{% pre prompt="$" %}\npython\n{% endpre %}';
+  var expected = '<p><pre class="language-python"><code data-html="&lt;span class=&quot;line&quot; data-prompt=&quot;$ &quot;&gt;python&lt;/span&gt;"></code></pre></p>';
   expect(t, '>=2.4.1', content, expected);
   expect(t, '>=3.0.0', content, expected);
 

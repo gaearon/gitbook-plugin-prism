@@ -204,7 +204,13 @@ pre.line-numbers > code {
 	content: "[" attr(data-user) "@" attr(data-host) "] #";
 }
 
-.command-line-prompt > span[data-prompt]:before {
+span[data-prompt]:before {
 	content: attr(data-prompt);
 }
 
+.no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
