@@ -1,37 +1,40 @@
 {
-  "name": "gitbook-plugin-prism",
-  "description": "Prism highlighting for gitbook",
+  "name": "gitbook-plugin-prism-djangogirls",
+  "description": "Prism highlighting for DjangoGirls tutorial",
   "main": "index.js",
-  "version": "2.3.0",
+  "version": "0.0.1",
   "scripts": {
     "lint": "eslint index.js test.js",
-    "test": "npm run lint && tape test.js"
+    "test": "yarn run lint && tape test.js"
   },
   "engines": {
     "gitbook": ">=2.4.1 <4.0.0"
   },
-  "homepage": "https://github.com/gaearon/gitbook-plugin-prism",
+  "homepage": "https://github.com/simobasso/gitbook-plugin-prism-djangogirls",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/gitbook-plugin-prism.git"
+    "url": "https://github.com/simobasso/gitbook-plugin-prism-djangogirls.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gaearon/gitbook-plugin-prism/issues"
+    "url": "https://github.com/simobasso/gitbook-plugin-prism-djangogirls/issues"
   },
   "dependencies": {
     "cheerio": "0.22.0",
     "mkdirp": "0.5.1",
-    "prismjs": "1.6.0"
+    "prismjs": "^1.8.1"
   },
   "devDependencies": {
-    "eslint": "3.11.1",
-    "eslint-config-semistandard": "7.0.0",
-    "eslint-config-standard": "6.2.1",
-    "eslint-plugin-promise": "3.4.0",
-    "eslint-plugin-react": "6.7.1",
-    "eslint-plugin-standard": "2.0.1",
+    "eslint": "^4.7.2",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
     "gitbook-tester": "1.4.3",
-    "tape": "4.6.3"
+    "tape": "^4.8.0",
+    "tape-catch": "^1.0.6"
   }
 }
