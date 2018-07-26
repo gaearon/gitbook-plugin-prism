@@ -22,7 +22,7 @@
   "dependencies": {
     "cheerio": "0.22.0",
     "mkdirp": "0.5.1",
-    "prismjs": "1.6.0"
+    "prismjs": "1.15.0"
   },
   "devDependencies": {
     "eslint": "3.11.1",
