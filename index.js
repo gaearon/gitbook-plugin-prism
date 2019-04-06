@@ -9,6 +9,7 @@ var DEFAULT_LANGUAGE = 'markup';
 var MAP_LANGUAGES = {
   'py': 'python',
   'js': 'javascript',
+  'ts': 'typescript',
   'rb': 'ruby',
   'cs': 'csharp',
   'sh': 'bash',
