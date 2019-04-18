@@ -38,7 +38,7 @@ function getConfig(context, property, defaultValue) {
 
 function isEbook(book) {
   // 2.x
-  if (book.options && book.options.generator) {
+  if (/^2+\.\d+\.\d+$/.test(book.gitbook.version)) {
     return book.options.generator === 'ebook';
   }
 
