@@ -1,6 +1,6 @@
 {
-  "name": "gitbook-plugin-prism",
-  "description": "Prism highlighting for gitbook",
+  "name": "honkit-plugin-prism",
+  "description": "Prism highlighting for honkit",
   "main": "index.js",
   "version": "2.4.0",
   "scripts": {
@@ -10,14 +10,14 @@
   "engines": {
     "gitbook": ">=2.4.1 <4.0.0"
   },
-  "homepage": "https://github.com/gaearon/gitbook-plugin-prism",
+  "homepage": "https://github.com/mziyut/honkit-plugin-prism",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/gitbook-plugin-prism.git"
+    "url": "https://github.com/mziyut/honkit-plugin-prism.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gaearon/gitbook-plugin-prism/issues"
+    "url": "https://github.com/mziyut/honkit-plugin-prism/issues"
   },
   "dependencies": {
     "cheerio": "0.22.0",
