@@ -1,7 +1,8 @@
-Gitbook Plugin for [Prism](http://prismjs.com/)
-==============
+# Honkit Plugin for [Prism](http://prismjs.com/)
 
-[![NPM](http://img.shields.io/npm/v/gitbook-plugin-prism.svg?style=flat-square&label=npm)](https://www.npmjs.com/package/gitbook-plugin-prism)
+[![NPM](http://img.shields.io/npm/v/honkit-plugin-prism.svg?style=flat-square&label=npm)](https://www.npmjs.com/package/honkit-plugin-prism)
+
+This repository was forked from [gaearon/gitbook-plugin-prism](https://github.com/gaearon/gitbook-plugin-prism) for the reason that the latest version of Honkit is not supported. [issue](https://github.com/gaearon/gitbook-plugin-prism/issues/42)
 
 ##### Before
 <img src='http://i.imgur.com/cbk6O52.png'>
@@ -11,7 +12,7 @@ Gitbook Plugin for [Prism](http://prismjs.com/)
 
 ## Usage
 
-Add the plugin to your `book.json`, and disable default GitBook code highlighting:
+Add the plugin to your `book.json`, and disable default Honkit code highlighting:
 
 ```json
 {

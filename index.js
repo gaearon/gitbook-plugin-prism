@@ -74,7 +74,7 @@ module.exports = {
   book: getAssets,
   ebook: function() {
 
-    // Adding prism-ebook.css to the CSS collection forces Gitbook
+    // Adding prism-ebook.css to the CSS collection forces Honkit
     // reference to it in the html markup that is converted into a PDF.
     var assets = getAssets.call(this);
     assets.css.push('prism-ebook.css');
@@ -129,7 +129,7 @@ module.exports = {
   },
   hooks: {
 
-    // Manually copy prism-ebook.css into the temporary directory that Gitbook uses for inlining
+    // Manually copy prism-ebook.css into the temporary directory that Honkit uses for inlining
     // styles from this plugin. The getAssets() (above) function can't be leveraged because
     // ebook-prism.css lives outside the folder referenced by this plugin's config.
     //
@@ -142,7 +142,7 @@ module.exports = {
         return;
       }
 
-      var outputDirectory = path.join(book.output.root(), '/gitbook/gitbook-plugin-prism');
+      var outputDirectory = path.join(book.output.root(), '/gitbook/honkit-plugin-prism');
       var outputFile = path.resolve(outputDirectory, 'prism-ebook.css');
       var inputFile = path.resolve(__dirname, './prism-ebook.css');
       mkdirp.sync(outputDirectory);
