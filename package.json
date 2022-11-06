@@ -8,7 +8,7 @@
     "test": "npm run lint && tape test.js"
   },
   "engines": {
-    "gitbook": ">=2.4.1 <4.0.0"
+    "gitbook": ">=2.4.1"
   },
   "homepage": "https://github.com/mziyut/honkit-plugin-prism",
   "repository": {
