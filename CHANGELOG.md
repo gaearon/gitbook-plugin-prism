@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Expanded Honkit (Gitbook) version support [#2](https://github.com/mziyut/honkit-plugin-prism/pull/2)
+- Migrate CI/CD from Travis to GitHub Actions [#2](https://github.com/mziyut/honkit-plugin-prism/pull/2)
 
 ### Removed
 
