@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- Setup dependabot [#2](https://github.com/mziyut/honkit-plugin-prism/pull/2)
 
 ### Changed
 - Expanded Honkit (Gitbook) version support [#2](https://github.com/mziyut/honkit-plugin-prism/pull/2)
